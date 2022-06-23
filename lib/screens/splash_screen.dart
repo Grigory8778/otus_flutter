@@ -1,8 +1,9 @@
 import 'dart:async';
 
 import 'package:flutter/material.dart';
+import 'package:otus_flutter/screens/bottom_nav_bar.dart';
 
-import 'home_screen.dart';
+
 
 class SplashScreen extends StatefulWidget {
   const SplashScreen({Key? key}) : super(key: key);
@@ -13,8 +14,8 @@ class SplashScreen extends StatefulWidget {
 
 class _SplashScreenState extends State<SplashScreen> {
   splashScreen() {
-    Timer(const Duration(seconds: 4), () async {
-      Navigator.pop(context, MaterialPageRoute(builder: (c) => const HomeScreen()));
+    Timer(const Duration(seconds: 1), () async {
+      Navigator.pushReplacement(context, MaterialPageRoute(builder: (c) => const BottomNavBar()));
     });
   }
 
